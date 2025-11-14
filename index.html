@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dadir Dev | Interactive Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <header id="header">
@@ -106,8 +110,84 @@
         <div class="container">
           <h2></h2>
           <div class="contact-content">
-            <div class="contact-info"></div>
-            <div class="contact-form"></div>
+            <div class="contact-info">
+              <h3>Let's Create Something Amazing</h3>
+              <p>
+                I'm always open to discussing new projects, creative ideas, or
+                opportunities to be part of your vision. Feel free to reach out
+                if you'd like to collaborate!
+              </p>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p>mohamed.dadir1996@gmail.com</p>
+                </div>
+              </div>
+              <!-- <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (123) 456-7890</p>
+                </div>
+              </div> -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Ethiopia, East Africa</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="name" class="form-label">Your Name</label>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="email" class="form-label">Your Email</label>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder=" "
+                  />
+                  <label for="subject" class="form-label">Subject</label>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    placeholder=" "
+                    required
+                  ></textarea>
+                  <label for="message" class="form-label">Your Message</label>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
