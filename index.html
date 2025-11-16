@@ -47,12 +47,12 @@
       </section>
 
       <!-- About Section -->
-      <section>
+      <section class="about" id="about">
         <div class="container">
           <h2>About Me</h2>
           <div class="about-content">
             <div class="about-image">
-              <img src="#" alt="" />
+              <img src="/assets/Profile Picture 1.png" alt="" />
             </div>
             <div class="about-text">
               <h3>Creating Digital Magic</h3>
@@ -81,6 +81,7 @@
           </div>
         </div>
       </section>
+
       <!-- Projects Section -->
       <section>
         <div class="container">
@@ -215,5 +216,26 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll(".about-image, .about-text").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
