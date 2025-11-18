@@ -83,28 +83,49 @@
       </section>
 
       <!-- Projects Section -->
-      <section>
+      <section class="projects" id="projects">
         <div class="container">
           <h2>My Projects</h2>
           <div class="projects-grid">
+            <!-- project-card-1 -->
             <div class="project-card">
               <div class="project-image">
-                <img src="" alt="" />
+                <img
+                  src="/assets/Random Quote Generator.png"
+                  alt="Random Quote Generator"
+                />
                 <div class="project-overlay">
-                  <a href="#" class="btn">view Details</a>
+                  <a
+                    href="https://github.com/Dadir-Dev/random-quote-generator"
+                    class="btn"
+                    >view Details</a
+                  >
                 </div>
               </div>
               <div class="project-info">
-                <h3></h3>
-                <p></p>
+                <h3>Random Quote Generator</h3>
+                <p>
+                  A responsive, theme-rich Random Quote Generator. lets users
+                  explore inspiring quotes from multiple categories, switch
+                  between light/dark/image themes, and copy quotes with one
+                  click.
+                </p>
                 <div class="project-tags">
                   <span class="project-tag">HTML</span>
                   <span class="project-tag">CSS</span>
                   <span class="project-tag">JavaScript</span>
                 </div>
                 <div class="project-links">
-                  <a href="" class="project-link">Live Demo</a>
-                  <a href="" class="project-link">Github</a>
+                  <a
+                    href="https://stupendous-llama-70eb07.netlify.app/"
+                    class="project-link"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/Dadir-Dev/random-quote-generator"
+                    class="project-link"
+                    >Github</a
+                  >
                 </div>
               </div>
             </div>
@@ -233,9 +254,11 @@
       }, observerOptions);
 
       // Observe elements for animation
-      document.querySelectorAll(".about-image, .about-text").forEach((el) => {
-        observer.observe(el);
-      });
+      document
+        .querySelectorAll(".about-image, .about-text, .project-card")
+        .forEach((el) => {
+          observer.observe(el);
+        });
     </script>
   </body>
 </html>
