@@ -10,6 +10,16 @@ const projectsData = [
     liveDemo: "https://stupendous-llama-70eb07.netlify.app/",
     githubLink: "https://github.com/Dadir-Dev/random-quote-generator",
   },
+  {
+    id: 2,
+    title: "Color Flipper",
+    description:
+      "A simple and interactive web app that lets you change the background color by clicking a button. You can switch between Simple and Hex color modes, and even copy the color code with one click.",
+    image: "/assets/Color Flipper.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    liveDemo: "https://dadir-dev.github.io/color-flipper/",
+    githubLink: "https://github.com/Dadir-Dev/color-flipper",
+  },
 ];
 
 // ===== Function to create project card HTML =====
