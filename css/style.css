@@ -876,6 +876,23 @@ footer {
     justify-content: center;
   }
 
+  .contact {
+    padding: 0;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-item p {
+    margin: 0;
+  }
+
+  .contact-icon {
+    margin: 0 0 10px 0;
+  }
+
   .contact-form {
     padding: 20px;
   }
