@@ -906,3 +906,34 @@ footer {
     padding: 0 15px;
   }
 }
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    margin: 0 5px;
+  }
+
+  .skill {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.copyright p {
+  margin-bottom: 0;
+}
