@@ -826,3 +826,66 @@ footer {
     justify-content: center;
   }
 }
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .hero {
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .hero-btns .btn {
+    margin-right: 0;
+    width: auto;
+    min-width: 160px;
+  }
+
+  .about-content {
+    gap: 30px;
+  }
+
+  .project-info {
+    padding: 20px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-link {
+    justify-content: center;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .form-control {
+    padding: 12px 15px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
