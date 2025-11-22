@@ -647,3 +647,46 @@ footer {
     padding: 0 15px;
   }
 }
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+  }
+
+  .about-content,
+  .contact-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .about-image,
+  .about-text {
+    transform: translateY(30px);
+    width: 100%;
+  }
+
+  .about-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .contact {
+    padding: 30px;
+    margin: 30px auto;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+}
