@@ -22,6 +22,27 @@ const projectsData = [
   },
 ];
 
+// ===== DOM Elements =====
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links li");
+
+// ===== Hamburger Menu Toggle =====
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.innerHTML = navLinks.classList.contains("active")
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking on links
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    navLinks.classList.remove("active");
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+  });
+});
+
 // ===== Function to create project card HTML =====
 function createProjectCard(project) {
   return `
