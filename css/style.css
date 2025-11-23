@@ -905,6 +905,10 @@ footer {
     width: 100%;
     padding: 0 15px;
   }
+
+  .copyright p {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 400px) {
@@ -934,6 +938,7 @@ footer {
   }
 }
 
-.copyright p {
-  margin-bottom: 0;
+/* Smooth transitions for all elements */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
