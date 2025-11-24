@@ -143,6 +143,29 @@ img {
   color: white;
 }
 
+/* Particles.js Background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    var(--darker-color) 0%,
+    var(--dark-color) 100%
+  );
+}
+
+/* Layout Styles */
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
 /* Header & Navigation */
 header {
   position: fixed;
@@ -253,15 +276,6 @@ header.scrolled {
 .hero-btns .btn {
   margin-right: 15px;
   margin-bottom: 15px;
-}
-
-.floating-elements {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
 }
 
 .floating-element {
