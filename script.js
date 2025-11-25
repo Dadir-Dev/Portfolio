@@ -106,7 +106,7 @@ const projectsData = [
     title: "Color Flipper",
     description:
       "A simple interactive app that changes background colors, lets you switch between Simple and Hex modes, and copy the shown color code.",
-    image: "./assets/Color Flipper.png",
+    image: "assets/Color Flipper.png",
     tags: ["HTML", "CSS", "JavaScript"],
     liveDemo: "https://dadir-dev.github.io/color-flipper/",
     githubLink: "https://github.com/Dadir-Dev/color-flipper",
@@ -116,7 +116,7 @@ const projectsData = [
     title: "Deep Focus",
     description:
       "A streamlined single-page study tracker that helps you monitor focus sessions, review productivity trends, and improve daily habits through an intuitive interface.",
-    image: "./assets/Deep Focus Tracker.png",
+    image: "assets/Deep Focus Tracker.png",
     tags: ["HTML", "CSS", "JavaScript"],
     liveDemo: "https://dadir-dev.github.io/Deep-Focus-Tracker/",
     githubLink: "https://github.com/Dadir-Dev/Deep-Focus-Tracker",
