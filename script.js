@@ -93,33 +93,33 @@ particlesJS("particles-js", {
 const projectsData = [
   {
     id: 1,
-    title: "Random Quote Generator",
+    title: "Queue Management System",
     description:
-      "A responsive quote generator offering inspiring categories, multiple visual themes, and one-click copying, helping users explore motivation through an adaptable web experience.",
-    image: "./assets/Random Quote Generator.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveDemo: "https://stupendous-llama-70eb07.netlify.app/",
-    githubLink: "https://github.com/Dadir-Dev/random-quote-generator",
+      "QueueFlow Pro is a modern queue management app built with React, Vite, and Tailwind CSS. It provides a clean dashboard for tracking customers in real time, updating service status, and monitoring overall queue performance.",
+    image: "./assets/Screenshot Desktop Design 2026-02-12.png",
+    tags: ["ReactJS", "TailwindCSS"],
+    liveDemo: "https://queue-management-five.vercel.app/",
+    githubLink: "https://github.com/Dadir-Dev/queue-management",
   },
   {
     id: 2,
-    title: "Color Flipper",
+    title: "Jumlazon E-commerce",
     description:
-      "A simple interactive app that changes background colors, lets you switch between Simple and Hex modes, and copy the shown color code.",
-    image: "assets/Color Flipper.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveDemo: "https://dadir-dev.github.io/color-flipper/",
-    githubLink: "https://github.com/Dadir-Dev/color-flipper",
+      "Jumlazon is a responsive e commerce frontend inspired by Amazon’s core shopping experience. Users can browse products, manage a locally persistent cart, and complete a seamless multi step checkout flow through a clean, intuitive interface.",
+    image: "./assets/home.png",
+    tags: ["HTML", "TailwindCSS", "Jest"],
+    liveDemo: "https://jumlazon-project.vercel.app/#",
+    githubLink: "https://github.com/Dadir-Dev/jumlazon-project",
   },
   {
     id: 3,
-    title: "Deep Focus",
+    title: "Dynamic Invoice Generator",
     description:
-      "A streamlined single-page study tracker that helps you monitor focus sessions, review productivity trends, and improve daily habits through an intuitive interface.",
-    image: "assets/Deep Focus Tracker.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveDemo: "https://dadir-dev.github.io/Deep-Focus-Tracker/",
-    githubLink: "https://github.com/Dadir-Dev/Deep-Focus-Tracker",
+      "A modern, responsive invoice builder built with React + Vite + Tailwind CSS. Create line items, configure tax/discount, edit billing details, and switch into a polished invoice preview in real time.",
+    image: "./assets/Invoice-Editor Screenshot 2026-02-18 180154.png",
+    tags: ["ReactJS", "TailwindCSS"],
+    liveDemo: "https://dynamic-invoice-generator.vercel.app/",
+    githubLink: "https://github.com/Dadir-Dev/dynamic-invoice-generator",
   },
 ];
 
@@ -131,8 +131,9 @@ const navItems = document.querySelectorAll(".nav-links li");
 // ===== Hamburger Menu Toggle =====
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
-  hamburger.innerHTML = navLinks.classList.contains("active")
-    ? '<i class="fas fa-times"></i>'
+  hamburger.innerHTML =
+    navLinks.classList.contains("active") ?
+      '<i class="fas fa-times"></i>'
     : '<i class="fas fa-bars"></i>';
 });
 
