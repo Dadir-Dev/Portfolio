@@ -1,184 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dadir Dev | Interactive Portfolio</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2306B6D4'/><stop offset='100%' stop-color='%237C3AED'/></linearGradient></defs><path d='M8 4h8c6.6 0 12 5.4 12 12s-5.4 12-12 12H8V4z' stroke='url(%23g)' stroke-width='2.5' fill='none'/><path d='M12 10v12M12 10h3c3.3 0 6 2.7 6 6s-2.7 6-6 6h-3' stroke='white' stroke-width='2'/></svg>" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&family=JetBrains+Mono&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div id="particles-js"></div>
+
   <header id="header">
     <div class="container">
-      <nav class="navbar">
-        <a href="#" class="logo">Portfolio</a>
-        <ul class="nav-links">
+      <nav class="navbar" aria-label="Primary">
+        <a href="#home" class="logo">Abdikadir Mohammed</a>
+        <ul class="nav-links" id="primary-navigation">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contacts</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger">
-          <i class="fas fa-bars"></i>
-        </div>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-controls="primary-navigation"
+          aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
       </nav>
     </div>
   </header>
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+
+  <main id="main">
+    <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Hi, I'm <span>Abdikadir Mohammed</span></h1>
-          <p>
-            A passionate web developer creating beautiful and functional
-            websites with modern technologies.
+          <p class="hero-label">Frontend Developer</p>
+          <h1>Building <span>Digital</span><br />Experiences.</h1>
+          <p class="hero-description">
+            I create high-performance, visually stunning web applications with
+            a focus on clean code and user-centric design.
           </p>
           <div class="hero-btns">
-            <a href="#projects" class="btn btn-outline">View My Work</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Let's Talk</a>
           </div>
         </div>
       </div>
-      <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <section id="about" class="about">
       <div class="container">
-        <h2>About Me</h2>
         <div class="about-content">
-          <div class="about-image">
-            <img src="./assets/Profile Picture 2.png" alt="profile picture of Abdikadir Mohammed" />
-          </div>
-          <div class="about-text">
-            <h3>Creating Digital Magic</h3>
-            <p>
-              I'm a frontend developer with a passion for creating beautiful,
-              functional, and user-friendly websites. I bring ideas to life
-              with clean code and stunning visuals.
-            </p>
-            <p>
-              My approach combines technical expertise with creative design
-              thinking to deliver solutions that not only work flawlessly but
-              also provide an exceptional user experience.
-            </p>
-            <div class="skills">
-              <span class="skill">HTML5</span>
-              <span class="skill">CSS3</span>
-              <span class="skill">JavaScript</span>
-              <span class="skill">Tailwind</span>
-              <span class="skill">React</span>
-              <span class="skill">Git</span>
-              <span class="skill">GitHub</span>
-              <span class="skill">Responsive Design</span>
-              <span class="skill">Animation</span>
+          <div class="about-image-container">
+            <div class="about-image">
+              <img src="./assets/Profile Picture 2.png" alt="Portrait of Abdikadir Mohammed" loading="lazy"
+                decoding="async" />
+            </div>
+            <div class="orbit-system">
+              <div class="skill-orbit" style="--i: 1">
+                <img src="./assets/react-svgrepo-com.svg" alt="React" title="React" />
+              </div>
+              <div class="skill-orbit" style="--i: 2">
+                <img src="./assets/js-svgrepo-com.svg" alt="JS" title="JavaScript" />
+              </div>
+              <div class="skill-orbit" style="--i: 3">
+                <img src="./assets/css3-svgrepo-com.svg" alt="CSS" title="CSS3" />
+              </div>
+              <div class="skill-orbit" style="--i: 4">
+                <img src="./assets/html-5-svgrepo-com.svg" alt="HTML" title="HTML5" />
+              </div>
+              <div class="skill-orbit" style="--i: 5">
+                <img src="./assets/git-svgrepo-com.svg" alt="Git" title="Git" />
+              </div>
+              <div class="skill-orbit" style="--i: 6">
+                <img src="./assets/tailwindcss-icon-svgrepo-com.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+              </div>
+              <div class="skill-orbit" style="--i: 7">
+                <img src="./assets/jest-svgrepo-com.svg" alt="Jest" title="Jest" />
+              </div>
             </div>
           </div>
+
+          <div class="about-text">
+            <span class="section-subtitle">Biography</span>
+            <h2>Who am I?</h2>
+            <p>
+              I am a dedicated developer focused on building scalable frontend
+              systems. I enjoy bridging the gap between design and
+              engineering—ensuring that every pixel serves a purpose while
+              maintaining a clean, maintainable codebase.
+            </p>
+            <div class="personal-info"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section id="projects" class="projects">
       <div class="container">
-        <h2>My Projects</h2>
+        <span class="section-subtitle">Portfolio</span>
+        <h2 class="section-title">Selected Projects</h2>
         <div class="projects-grid"></div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section id="contact" class="work-together" aria-labelledby="work-together-title">
       <div class="container">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Let's Create Something Amazing</h3>
+        <div class="work-together-card">
+          <div class="work-together-text">
+            <span class="section-subtitle">Connect</span>
+            <h2 class="section-title" id="work-together-title">
+              Let’s Work Together
+            </h2>
             <p>
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision. Feel free to reach out
-              if you'd like to collaborate!
+              Have an idea or a project in mind? Reach out and let’s build
+              something clean, fast, and user-focused.
             </p>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div>
-                <h4>Email</h4>
-                <p>mohamed.dadir1996@gmail.com</p>
-              </div>
-            </div>
-            <!-- <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div>
-                  <h4>Phone</h4>
-                  <p>+1 (123) 456-7890</p>
-                </div>
-              </div> -->
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h4>Location</h4>
-                <p>Ethiopia, East Africa</p>
-              </div>
-            </div>
           </div>
-          <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder=" " required />
-                <label for="name" class="form-label">Your Name</label>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder=" " required />
-                <label for="email" class="form-label">Your Email</label>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder=" " />
-                <label for="subject" class="form-label">Subject</label>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" id="message" placeholder=" " required></textarea>
-                <label for="message" class="form-label">Your Message</label>
-              </div>
-              <button type="submit" class="btn">Send Message</button>
-            </form>
+
+          <div class="work-together-actions">
+            <div class="social-links" aria-label="Social links">
+              <a href="https://github.com/Dadir-Dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                  class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/abdikadir-mohammed-54717318b/" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"
+                  aria-hidden="true"></i></a>
+              <a href="https://x.com/Dadir_Dev" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i
+                  class="fab fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <a href="https://www.linkedin.com/in/abdikadir-mohammed-54717318b/" target="_blank"
+              class="btn btn-primary">Start a
+              Project</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-content">
-        <div class="logo">Portfolio</div>
-        <div class="social-links">
-          <a href="https://github.com/Dadir-Dev" class="social-link"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/abdikadir-mohammed-54717318b/" class="social-link"><i
-              class="fab fa-linkedin-in"></i></a>
-          <a href="https://x.com/Dadir_Dev" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.frontendmentor.io/profile/Dadir-Dev" class="social-link"><img
-              src="./assets/favicon-32x32.png" alt="Frontend Mentor" /></a>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 Abdikadir Mohammed. All Rights Reserved.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dadir Dev. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
