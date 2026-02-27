@@ -1,230 +1,204 @@
-// ===== Particles.js Background Animation =====
-particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 80,
-      density: {
-        enable: true,
-        value_area: 800,
-      },
-    },
-    color: {
-      value: ["#6c63ff", "#ff6584", "#00d9ff"],
-    },
-    shape: {
-      type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000",
-      },
-    },
-    opacity: {
-      value: 0.5,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false,
-      },
-    },
-    size: {
-      value: 5,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 2,
-        size_min: 0.1,
-        sync: false,
-      },
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#6c63ff",
-      opacity: 0.2,
-      width: 1,
-    },
-    move: {
-      enable: true,
-      speed: 2,
-      direction: "none",
-      random: true,
-      straight: false,
-      out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200,
-      },
-    },
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: true,
-        mode: "grab",
-      },
-      onclick: {
-        enable: true,
-        mode: "push",
-      },
-      resize: true,
-    },
-    modes: {
-      grab: {
-        distance: 140,
-        line_linked: {
-          opacity: 0.5,
-        },
-      },
-      push: {
-        particles_nb: 4,
-      },
-    },
-  },
-  retina_detect: true,
-});
+const prefersReducedMotion =
+  window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
 
-// Rest of your existing JavaScript code...
-// ===== Projects Data =====
+// ===== Particles Config =====
+function initParticles() {
+  const target = document.getElementById("particles-js");
+  if (!target) return;
+  if (prefersReducedMotion) return;
+  if (typeof window.particlesJS !== "function") return;
+
+  const isSmallScreen = window.innerWidth <= 768;
+
+  window.particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: isSmallScreen ? 40 : 60,
+        density: { enable: true, value_area: 800 },
+      },
+      color: { value: "#7c3aed" },
+      shape: { type: "circle" },
+      opacity: { value: 0.2 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#7c3aed",
+        opacity: 0.1,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 1.5,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+      },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" },
+        resize: true,
+      },
+      modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } } },
+    },
+    retina_detect: true,
+  });
+}
+
+// ===== Project Data =====
 const projectsData = [
   {
-    id: 1,
+    title: "Jumlazon E-commerce",
+    description:
+      "Jumlazon is a full-featured e-commerce frontend clone that mimics the core shopping experience of Amazon. Browse products, manage your cart with local persistence, and complete a multi-step checkout flow—all with a clean, responsive UI.",
+    image: "./assets/Jumlazon-home.png",
+    tags: ["HTML", "TailwindCSS", "JavaScript"],
+    liveDemo: "https://jumlazon-project.vercel.app/",
+    githubLink: "https://github.com/Dadir-Dev/jumlazon-project",
+  },
+  {
     title: "Queue Management System",
     description:
       "QueueFlow Pro is a modern queue management app built with React, Vite, and Tailwind CSS. It provides a clean dashboard for tracking customers in real time, updating service status, and monitoring overall queue performance.",
-    image: "./assets/Screenshot Desktop Design 2026-02-12.png",
-    tags: ["ReactJS", "TailwindCSS"],
+    image: "./assets/QueueFlow-Pro_Desktop Design 2026-02-12.png",
+    tags: ["React", "Vite", "TailwindCSS"],
     liveDemo: "https://queue-management-five.vercel.app/",
     githubLink: "https://github.com/Dadir-Dev/queue-management",
   },
   {
-    id: 2,
-    title: "Jumlazon E-commerce",
-    description:
-      "Jumlazon is a responsive e commerce frontend inspired by Amazon’s core shopping experience. Users can browse products, manage a locally persistent cart, and complete a seamless multi step checkout flow through a clean, intuitive interface.",
-    image: "./assets/home.png",
-    tags: ["HTML", "TailwindCSS", "Jest"],
-    liveDemo: "https://jumlazon-project.vercel.app/#",
-    githubLink: "https://github.com/Dadir-Dev/jumlazon-project",
-  },
-  {
-    id: 3,
     title: "Dynamic Invoice Generator",
     description:
       "A modern, responsive invoice builder built with React + Vite + Tailwind CSS. Create line items, configure tax/discount, edit billing details, and switch into a polished invoice preview in real time.",
     image: "./assets/Invoice-Editor Screenshot 2026-02-18 180154.png",
-    tags: ["ReactJS", "TailwindCSS"],
+    tags: ["React", "Vite", "TailwindCSS"],
     liveDemo: "https://dynamic-invoice-generator.vercel.app/",
     githubLink: "https://github.com/Dadir-Dev/dynamic-invoice-generator",
   },
 ];
 
-// ===== DOM Elements =====
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const navItems = document.querySelectorAll(".nav-links li");
-
-// ===== Hamburger Menu Toggle =====
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  hamburger.innerHTML =
-    navLinks.classList.contains("active") ?
-      '<i class="fas fa-times"></i>'
-    : '<i class="fas fa-bars"></i>';
-});
-
-// Close mobile menu when clicking on links
-navItems.forEach((item) => {
-  item.addEventListener("click", function () {
-    navLinks.classList.remove("active");
-    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-  });
-});
-
-// ===== Function to create project card HTML =====
-function createProjectCard(project) {
-  return `
-    <div class="project-card">
-              <div class="project-image">
-                <img
-                  src="${project.image}"
-                  alt="${project.title}"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="${project.liveDemo}"
-                    class="btn"
-                    target="_blank"
-                    >view Details</a
-                  >
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>${project.title}</h3>
-                <p>
-                  ${project.description}
-                </p>
-                <div class="project-tags">
-                  ${project.tags
-                    .map((tag) => `<span class="tag">${tag}</span>`)
-                    .join("")}
-                </div>
-                <div class="project-links">
-                  <a
-                    href="${project.liveDemo}"
-                    class="project-link"
-                    target="_blank"
-                    ><i class="fas fa-external-link-alt"></i>Live Demo</a
-                  >
-                  <a
-                    href="${project.githubLink}"
-                    class="project-link"
-                    target="_blank"
-                    ><i class="fab fa-github"></i>Github</a
-                  >
-                </div>
-              </div>
-            </div>
-    `;
-}
-
-// ===== Function to render projects =====
+// ===== Render Projects =====
 function renderProjects() {
-  const projectsContainer = document.querySelector(".projects-grid");
-  projectsData.forEach((project) => {
-    const projectCard = createProjectCard(project);
-    projectsContainer.innerHTML += projectCard;
-  });
+  const container = document.querySelector(".projects-grid");
+  if (!container) return;
+
+  container.innerHTML = projectsData
+    .map(
+      (p) => `
+    <div class="project-card">
+      <div class="project-image">
+        <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async">
+      </div>
+      <div class="project-info">
+        <h3>${p.title}</h3>
+        <div class="project-tags">
+          ${p.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
+        </div>
+        <p>${p.description}</p>
+        <div class="project-links">
+          <a
+            href="${p.liveDemo}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="${p.title} live demo"
+            class="btn btn-outline"
+          >Demo</a>
+          <a
+            href="${p.githubLink}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="${p.title} source code on GitHub"
+            class="btn btn-outline btn-icon"
+          ><i class="fab fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  `,
+    )
+    .join("");
+
+  initScrollReveal();
 }
 
-// Re-initialize scroll animations
-function initScrollAnimations() {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  };
-
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+// ===== Scroll Reveal & Header Effects =====
+function initScrollReveal() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
         entry.target.classList.add("in-view");
-      }
-    });
-  }, observerOptions);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.1 },
+  );
 
   document
-    .querySelectorAll(".about-image, .about-text, .project-card, .contact")
-    .forEach((el) => {
-      observer.observe(el);
-    });
+    .querySelectorAll(".project-card, .about-text")
+    .forEach((el) => observer.observe(el));
 }
 
-// ===== Render projects when the page loads =====
-window.addEventListener("load", function () {
+function initHeaderEffects() {
+  const header = document.querySelector("header");
+  if (!header) return;
+
+  const onScroll = () => {
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+function initMobileMenu() {
+  const button = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  if (!button || !navLinks) return;
+
+  const setOpen = (open) => {
+    navLinks.classList.toggle("is-open", open);
+    button.setAttribute("aria-expanded", String(open));
+    button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.classList.toggle("nav-open", open);
+  };
+
+  const isOpen = () => button.getAttribute("aria-expanded") === "true";
+
+  button.addEventListener("click", () => setOpen(!isOpen()));
+
+  navLinks.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (link) setOpen(false);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!isOpen()) return;
+    const target = e.target;
+    if (button.contains(target)) return;
+    if (navLinks.contains(target)) return;
+    setOpen(false);
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (!isOpen()) return;
+    setOpen(false);
+    button.focus();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) setOpen(false);
+  });
+}
+
+// Initialize
+document.addEventListener("DOMContentLoaded", () => {
+  initParticles();
   renderProjects();
-  initScrollAnimations();
+  initHeaderEffects();
+  initMobileMenu();
 });
